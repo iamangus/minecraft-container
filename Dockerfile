@@ -12,7 +12,7 @@ FROM eclipse-temurin:${JRE_VER}-jre-alpine
 RUN apk add --no-cache bash curl
 
 # create user
-RUN addgroup -S mcgrp && adduser -S mcusr -G mcgrp
+RUN addgroup -g 1000 -S mcgrp && adduser -u 1000 -S mcusr -G mcgrp
 
 # Tell docker that all future commands should run as the minecraft user
 USER mcusr
