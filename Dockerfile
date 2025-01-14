@@ -21,7 +21,7 @@ USER mcusr
 WORKDIR /home/mcusr
 
 # Define entry point
-ENTRYPOINT bash ~/entrypoint.sh
+ENTRYPOINT bash /home/mcusr/entrypoint.sh
 
 # Expose server and RCON ports
 EXPOSE 25565 25575
