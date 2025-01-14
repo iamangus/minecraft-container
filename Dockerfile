@@ -3,7 +3,7 @@
 # https://github.com/dtp/docker-minecraft
 #
 
-ENV JRE_VER="17"
+ARG JRE_VER="17"
 
 # Pull base image
 FROM eclipse-temurin:${JRE_VER}-jre-alpine
