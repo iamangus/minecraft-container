@@ -8,7 +8,10 @@ ARG JRE_VER="17"
 # Pull base image
 FROM eclipse-temurin:${JRE_VER}-jre-alpine
 
-# Install dependencies and create user
+# Install dependencies
+RUN apk add --no-cache bash
+
+# create user
 RUN addgroup -S mcgrp && adduser -S mcusr -G mcgrp
 
 # Tell docker that all future commands should run as the minecraft user
