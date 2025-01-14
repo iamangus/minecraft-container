@@ -9,7 +9,7 @@ ARG JRE_VER="17"
 FROM eclipse-temurin:${JRE_VER}-jre-alpine
 
 # Install dependencies
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash curl
 
 # create user
 RUN addgroup -S mcgrp && adduser -S mcusr -G mcgrp
